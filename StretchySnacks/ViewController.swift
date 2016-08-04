@@ -136,7 +136,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tap(gesture: UITapGestureRecognizer) {
         let tag = gesture.view!.tag
-        tappedImagesArray.append(tag)
+        tappedImagesArray.insert(tag, atIndex: 0)
+//        tappedImagesArray.append(tag)
         print("Added!")
         tableView.reloadData()
     }
